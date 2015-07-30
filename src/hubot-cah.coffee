@@ -25,6 +25,8 @@
 #   Cory Metcalfe (corymetcalfe@gmail.com)
 #
 
+_ = require('lodash')
+
 helpSummary = "_hubot-cah commands:_"
 helpSummary += "\ncah help - List cah commands"
 helpSummary += "\ncah join - Add yourself to the game"
@@ -220,7 +222,7 @@ module.exports = (robot) ->
   # by default only works when all active players have submitted,
   # but can be overridden by passing true for force param
   show_answers = (res, force) ->
-    answers = db.answers
+    answers = db.answers = _.shuffle db.answers
     answers_n = answers.length
     submitters_n = db.activePlayers.length - 1
     status = "#{answers_n}/#{submitters_n}"
