@@ -4,5 +4,6 @@ module.exports = [
   "I blame Andy",
   "Oh hey!",
   "Tootltips",
-  "Webhooookssss"
+  "Webhooookssss",
+  "The way aknight loves React"
 ];
